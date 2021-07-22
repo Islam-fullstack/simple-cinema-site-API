@@ -13,6 +13,8 @@ body{
 .header {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid whitesmoke;
 }
 
 .container{
@@ -44,6 +46,20 @@ body{
 
 }
 
+@media screen and (max-width: 600px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__content{
+        margin: 25px;
+    }
+}
+
 .header #search::placeholder, 
 .header #search::-webkit-input-placeholder{
     color: white;
@@ -54,30 +70,42 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 2px solid red;
 }
 
 .film-card{
     width: 240px;
     margin: 10px;
+}
 
+.film-card:hover{
+    cursor: pointer;
+}
+
+.film-card:hover .dark{
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .film-img-box{
     height: 360px;
-    
+    position: relative;
 }
 
 .dark{
-    background-color: rgba(0, 0, 0, 0.603); 
-    border: 2px dashed green; 
+    background-color: rgba(0,0,0,0.2); 
+    /* border: 2px dashed green;  */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .film-img{
     width: 100%;
     height: 100%; 
-    position: relative;
 }
+
+
 
 .film-rate{
     position: absolute;
@@ -93,3 +121,27 @@ body{
     border-radius: 50%;
     z-index: 1;
 }
+
+.green{
+    border: 2px solid green;
+}
+.red{
+    border: 2px solid red;
+}
+.orange{
+    border: 2px solid orange;
+}
+
+/* Film INFORMATION */
+
+.film-name{
+    color: white;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.film-genre{
+    color: yellow;
+    
+}
+
