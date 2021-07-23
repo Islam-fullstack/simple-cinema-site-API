@@ -43,7 +43,6 @@ body{
     /* box-shadow: 0 0 15px rgb(144, 86, 199); */
     font-size: 16px;
     letter-spacing: 1.5px;
-
 }
 
 @media screen and (max-width: 600px) {
@@ -57,6 +56,12 @@ body{
 
     .header__content{
         margin: 25px;
+    }
+
+    .header #search{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -75,6 +80,7 @@ body{
 .film-card{
     width: 240px;
     margin: 10px;
+    /* padding: 10px; */
 }
 
 .film-card:hover{
@@ -141,7 +147,5 @@ body{
 }
 
 .film-genre{
-    color: yellow;
-    
+    color: yellow;   
 }
-
